@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Disease Prediction</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .navbar h1 {
+      color: white;
+      margin: 0;
+      font-size: 24px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .prediction-message {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .prediction-message img {
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <h1>Heart Disease Prediction</h1>
+  </div>
+  
+  <h2>Results:</h2>
+  
+  <div class="prediction-message">
+    {% if prediction == 1 %}
+      <h2 style="color:red;">Sorry to say, chances of having Heart disease are high. Please consult a doctor.</h2>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiPsTqx0xw0aGEY64kyk7qvW29yz9xN3QWPg&s" alt="Heart Disease Risk" width="450" height="350">
+    {% elif prediction == 0 %}
+      <h2 style="color:blue;">No worries! You don't have Heart disease.</h2>
+      <img src="https://www.becomingminimalist.com/wp-content/uploads/2019/09/how-to-be-happy.jpg" alt="No Heart Disease" width="350" height="250">
+    {% endif %}
+  </div>
+
+</body>
+</html>
